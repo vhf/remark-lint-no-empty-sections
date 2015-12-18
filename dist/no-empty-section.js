@@ -14,4 +14,6 @@ function noEmptySection(ast, file, preferred, done) {
   done();
 }
 
-module.exports = noEmptySection;
+module.exports = {
+  'empty-sections': noEmptySection
+};
