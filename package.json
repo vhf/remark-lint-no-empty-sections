@@ -1,6 +1,6 @@
 {
   "name": "mdast-lint-empty-sections",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Checks that all markdown titles have a content",
   "author": "Victor Felder <victorfelder@gmail.com>",
   "repository": {
@@ -26,5 +26,5 @@
     "url": "https://github.com/vhf/mdast-lint-empty-sections/issues"
   },
   "homepage": "https://github.com/vhf/mdast-lint-empty-sections#readme",
-  "main": "dist/index.js"
+  "main": "dist/no-empty-section.js"
 }
