@@ -1,6 +1,6 @@
 {
   "name": "remark-lint-no-empty-sections",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Checks that all markdown titles have a content",
   "author": "Victor Felder <victorfelder@gmail.com>",
   "repository": {
