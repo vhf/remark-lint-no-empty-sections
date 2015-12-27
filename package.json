@@ -1,11 +1,11 @@
 {
-  "name": "mdast-lint-empty-sections",
+  "name": "remark-lint-no-empty-sections",
   "version": "0.1.1",
   "description": "Checks that all markdown titles have a content",
   "author": "Victor Felder <victorfelder@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/vhf/mdast-lint-empty-sections.git"
+    "url": "git+https://github.com/vhf/remark-lint-no-empty-sections.git"
   },
   "license": "MIT",
   "dependencies": {
@@ -23,8 +23,8 @@
     "build": "babel lib -d dist"
   },
   "bugs": {
-    "url": "https://github.com/vhf/mdast-lint-empty-sections/issues"
+    "url": "https://github.com/vhf/remark-lint-no-empty-sections/issues"
   },
-  "homepage": "https://github.com/vhf/mdast-lint-empty-sections#readme",
+  "homepage": "https://github.com/vhf/remark-lint-no-empty-sections#readme",
   "main": "dist/no-empty-section.js"
 }
