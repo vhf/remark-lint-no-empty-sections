@@ -9,18 +9,32 @@
   },
   "license": "MIT",
   "dependencies": {
+    "mdast-util-to-string": "^1.0.2",
+    "unified-lint-rule": "^1.0.0",
     "unist-util-visit": "^1.0.0"
   },
   "devDependencies": {
+    "babel-cli": "^6.23.0",
     "babel-core": "^6.3.17",
-    "babel-eslint": "^5.0.0-beta6",
+    "babel-eslint": "^7.1.1",
     "babel-preset-es2015": "^6.3.13",
-    "eslint": "^1.10.3",
-    "eslint-config-airbnb": "^2.1.1",
-    "eslint-plugin-react": "^3.11.3"
+    "eslint": "^3.16.1",
+    "eslint-config-airbnb": "^14.1.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^4.0.0",
+    "eslint-plugin-react": "^6.10.0",
+    "remark": "^7.0.0",
+    "remark-cli": "^3.0.0",
+    "remark-lint": "^6.0.0",
+    "tape": "^4.6.3"
   },
   "scripts": {
-    "build": "babel lib -d dist"
+    "lint": "eslint .",
+    "build-md": "remark . -qfo",
+    "build-lib": "babel lib -d dist",
+    "build": "npm run build-md && npm run build-lib",
+    "test-api": "node test",
+    "test": "npm run lint && npm run build && npm run test-api"
   },
   "bugs": {
     "url": "https://github.com/vhf/remark-lint-no-empty-sections/issues"

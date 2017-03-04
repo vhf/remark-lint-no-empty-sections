@@ -1,19 +1,21 @@
 'use strict';
 
+var rule = require('unified-lint-rule');
 var visit = require('unist-util-visit');
+var toString = require('mdast-util-to-string');
 
-function noEmptySection(ast, file, preferred, done) {
-  visit(ast, function (node, index, parent) {
+function noEmptySection(ast, file) {
+  visit(ast, 'heading', function (node, index, parent) {
     var next = parent && parent.children[index + 1];
+    var label = toString(node);
 
-    if (next && node.type === 'heading' && next.type === 'heading' && node.depth === next.depth) {
-      file.warn('Remove empty section' + (node.children.length ? ': "' + node.children[0].value + '"' : ''), next);
+    if (next && next.type === 'heading' && next.depth === node.depth) {
+      file.warn('Remove empty section: "' + label + '"', {
+        start: node.position.end,
+        end: next.position.start
+      });
     }
   });
-
-  done();
 }
 
-module.exports = {
-  'empty-sections': noEmptySection
-};
+module.exports = rule('remark-lint:no-empty-sections', noEmptySection);

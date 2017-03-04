@@ -1,7 +1,0 @@
-{
-  "plugins": {
-    "mdast-lint": {
-      "external": ["mdast-lint-empty-sections"]
-    }
-  }
-}
