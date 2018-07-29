@@ -2,9 +2,20 @@
 
 This [remark-lint](https://github.com/wooorm/remark-lint) rule was created for [free-programming-books-lint](https://github.com/vhf/free-programming-books-lint) to enforce [free-programming-books](https://github.com/vhf/free-programming-books) [formatting guidelines](https://github.com/vhf/free-programming-books/blob/master/CONTRIBUTING.md#formatting).
 
-This rule checks that every `([#]+)title` has some content. This content can be anything: a lower-level title, a higher-level title, text, list, etc. It will only complain if you have an n-level title without content followed by another n-level title.
+This rule checks that every `([#]+)heading` has some content. This content can be anything: a lower-level heading, a higher-level heading, text, list, etc. It will warn when it detects an `n`-level heading without content followed by another `n`-level heading.
 
-```Text
+
+## Examples
+
+```markdown
+<!-- Invalid -->
+
+# A
+
+## B (this section is empty!)
+```
+
+```markdown
 <!-- Invalid -->
 
 # A
@@ -13,11 +24,17 @@ This rule checks that every `([#]+)title` has some content. This content can be 
 
 ## C
 
+Some content.
+```
+
+```markdown
 <!-- Valid -->
 
 # A
 
 ## C
+
+Some content.
 ```
 
 ## Using the rule
