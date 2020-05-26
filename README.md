@@ -4,7 +4,6 @@ This [remark-lint](https://github.com/wooorm/remark-lint) rule was created for [
 
 This rule checks that every `([#]+)heading` has some content. This content can be anything: a lower-level heading, a higher-level heading, text, list, etc. It will warn when it detects an `n`-level heading without content followed by another `n`-level heading.
 
-
 ## Examples
 
 ```markdown
