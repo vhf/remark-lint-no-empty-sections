@@ -10,13 +10,13 @@ function noEmptySection(ast, file) {
     var label = toString(node);
 
     if (next && next.type === 'heading' && next.depth === node.depth) {
-      file.warn('Remove empty section: "' + label + '"', {
+      file.message('Remove empty section: "' + label + '"', {
         start: node.position.end,
         end: next.position.start
       });
     }
     if (parent.children.length - 1 === index) {
-      file.warn('Remove empty section: "' + label + '"', {
+      file.message('Remove empty section: "' + label + '"', {
         start: node.position.start,
         end: node.position.end
       });

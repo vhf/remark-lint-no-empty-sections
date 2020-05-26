@@ -1,6 +1,6 @@
 {
   "name": "remark-lint-no-empty-sections",
-  "version": "3.0.0",
+  "version": "4.0.0",
   "description": "Checks that all markdown titles have a content",
   "author": "Victor Felder <victorfelder@gmail.com>",
   "repository": {
@@ -23,9 +23,9 @@
     "eslint-plugin-import": "^2.2.0",
     "eslint-plugin-jsx-a11y": "^4.0.0",
     "eslint-plugin-react": "^6.10.0",
-    "remark": "^9.0.0",
+    "remark": "^12.0.0",
     "remark-cli": "^5.0.0",
-    "remark-lint": "^6.0.0",
+    "remark-lint": "^7.0.0",
     "tape": "^4.6.3"
   },
   "scripts": {
